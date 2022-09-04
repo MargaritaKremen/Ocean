@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean</title>
+    <link data-vue-tag="ssr" rel="icon" type="image/png" sizes="96x96"
+        href="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/035/236/original/favicon-32x32.png?1653497751">
+</head>
+<style>
+    body {
+        background-image: linear-gradient(to top, #6399a6 20%, rgb(233, 243, 248) 80%);
+        color: #475053;
+        width: 50%;
+        margin: 60px auto;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+        font-size: 35px;
+        color: #606c70;
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    h2 {
+        font-size: 25px;
+        color: #606c70;
+
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding: 20px;
+    }
+
+    img {
+        display: block;
+        margin: 0 auto;
+        max-width: 70%;
+        border-radius: 4px;
+        padding: 30px;
+    }
+
+    hr {
+        size: 2;
+        color: #606c70;
+    }
+
+    .p {
+        display: block;
+        background-color: #ecf9f9b7;
+        text-align: justify;
+        padding: 10px;
+        border-radius: 10px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 25px;
+        color: #1a3137f1;
+        margin: 2em 15% 1em;
+    }
+
+    p {
+        margin: 1em 15% 1em;
+    }
+
+    button {
+        display: block;
+        margin: 0 auto;
+        background-color: #e0f0f0eb;
+        font-size: 20px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(67, 83, 83);
+        padding: 15px 20px;
+        border: #6c7172;
+        border-radius: 10px;
+        box-shadow: 5px 5px 10px rgb(156, 154, 138);
+        cursor: pointer;
+        transition: .2s linear;
+    }
+
+    button:hover {
+        background: #6399a6;
+        color: #fff;
+        border: 1px solid #6399a6;
+        box-shadow: 5px 5px 10px rgb(156, 154, 138) inset;
+    }
+
+    a:hover {
+        color: #344545;
+    }
+</style>
+
+<body>
+    <h1>
+        I Love Ocean
+    </h1>
+
+    <h2>
+        Especially Atlantic Ocean
+    </h2>
+
+    <hr width="75%">
+
+    <img src="
+https://s3.amazonaws.com/shecodesio-production/uploads
+/files/000/035/111/original/photo_2022-05-24_14-57-42.jpg?1653404536" alt="" />
+
+    <hr width="75%">
+    <p class="p">
+        For the first time in my life, I found myself on the coast of the Atlantic Ocean.
+        It was March, rainy weather and a storm. But then I realized that I loved him.
+        Now not a day goes by without going to the ocean. It is beautiful at any time of the day,
+        in any weather. I admire this element!
+    </p>
+    <p>
+        🧾<a href="https://en.wikipedia.org/wiki/Atlantic_Ocean">Wikipedia </a>
+    </p>
+    <p>
+        <button>
+            🚶🏻‍♀️ Do you want to spend a day <div>at the coast? 🚶🏻‍♂️</div>
+        </button>
+    </p>
+</body>
+<script>
+    function updateHeading(newHeading) {
+        let heading = document.querySelector("button");
+        heading.innerText = newHeading;
+    }
+    function chek(email) {
+        if (email == null || email == "") {
+            return false;
+
+        } else {
+            return true
+        };
+    }
+
+    function contactUs() {
+        let name = prompt("What is your name?");
+        let email = prompt("If you want to take a walk, please enter your email");
+
+        if (chek(email) == false) {
+            updateHeading(`🙃 Have a nice day, ${name}!`);
+        } else {
+            updateHeading(`Fine, ${name}! Details about the walk you will see in the email.`);
+        }
+    }
+    let applyButton = document.querySelector("button");
+    applyButton.addEventListener("click", contactUs);
+</script>
+
+</html>
